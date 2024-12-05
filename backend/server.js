@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const serverless = require("serverless-http");
+// const serverless = require("serverless-http");
 require('dotenv').config();
 
 const app = express();
@@ -30,4 +30,4 @@ app.listen(port, () => {
 //   res.send('Hello World');
 // } );
 
-module.exports.handler = serverless(app);
+// module.exports.handler = serverless(app);
