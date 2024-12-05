@@ -1,6 +1,5 @@
 [build]
   command = "npm run build"
-  publish = "backend/public" # Where your frontend static files are placed
 
 [functions]
   directory = "backend"
