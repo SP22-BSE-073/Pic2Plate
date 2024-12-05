@@ -15,7 +15,8 @@ const Home = () => {
         console.log("Dish Name:", dishName);
         setLoading(true);
         try {
-            const res = await axios.post('http://localhost:3000/api/generate', { dishName });
+            const baseURL = import.meta.env.VITE_APP_URL;
+            const res = await axios.post(`${baseURL}/api/generate`, { dishName });
             console.log(res.data);
             setResponse(res.data);
         } catch (error) {

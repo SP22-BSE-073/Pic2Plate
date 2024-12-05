@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "backend/public" # Where your frontend static files are placed
+
+[functions]
+  directory = "backend"
+  included_files = [
+    "backend/server.js",
+    "backend/**", # Ensures all backend files are deployed
+    "!backend/public/**" # Exclude static files as they're served separately
+  ]
+  node_bundler = "esbuild"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"

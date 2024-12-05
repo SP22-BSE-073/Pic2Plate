@@ -71,7 +71,8 @@ router.post("/generate", async (req, res) => {
   const {dishName} = req.body;
   try {
     const recipe = await generateRecipe(dishName);
-    console.log("Recipe generated:", recipe);
+    // console.log("Recipe generated:", recipe);
+    console.log("Recipe generated")
     const recipeObj = JSON.parse(recipe);
     res.status(200).json({
       dish: dishName,
